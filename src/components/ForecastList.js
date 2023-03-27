@@ -10,7 +10,7 @@ function ForecastList({ forecasts }) {
           <ForcastSummary
             key={forecast.date}
             date={forecast.date}
-            icon={forecast.icon}
+            iconCode={forecast.icon}
             temperature={forecast.temperature.max}
             description={forecast.description}
           />

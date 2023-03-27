@@ -1,8 +1,8 @@
 import React from "react";
 import iconData from "../data/iconData.json";
 
-function ForcastSummary({ date, temperature, description, icon }) {
-  const weatherCode = `${icon.slice(0, 1)}00`;
+function ForcastSummary({ date, temperature, description, iconCode }) {
+  const weatherCode = `${iconCode.slice(0, 1)}00`;
   const formattedDate = new Date(date).toDateString();
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
