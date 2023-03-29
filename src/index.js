@@ -7,6 +7,10 @@ import App from "./components/App";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App location={forecast.location} forecasts={forecast.forecasts} />
+    <App
+      location={forecast.location}
+      forecasts={forecast.forecasts}
+      details={forecast}
+    />
   </React.StrictMode>
 );
