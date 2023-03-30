@@ -2,7 +2,7 @@ import "../styles/ForecastList.css";
 import React from "react";
 import ForcastSummary from "./ForecastSummary";
 
-function ForecastList({ forecasts }) {
+function ForecastList({ forecasts, handleForecastSelect }) {
   return (
     <div className="forecast-list">
       {forecasts.map((forecast) => {
@@ -13,6 +13,7 @@ function ForecastList({ forecasts }) {
             iconCode={forecast.icon}
             temperature={forecast.temperature.max}
             description={forecast.description}
+            handleForecastSelect={handleForecastSelect}
           />
         );
       })}
