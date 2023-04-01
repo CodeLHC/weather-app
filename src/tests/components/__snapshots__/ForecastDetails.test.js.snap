@@ -19,7 +19,7 @@ exports[`ForecastDetails renders correctly 1`] = `
       Humidity: 30%
     </div>
     <div>
-      Wind: [object Object]mph
+      Wind: 60mph
     </div>
   </div>
 </DocumentFragment>

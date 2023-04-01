@@ -9,7 +9,7 @@ function ForcastSummary({
   iconCode,
   handleForecastSelect,
 }) {
-  const weatherCode = `${iconCode.slice(0, 1)}00`;
+  const weatherCode = `${iconCode.toString().slice(0, 1)}00`;
   return (
     <div className="forecast-summary" data-testid="forecast-summary">
       <div className="forecast-summary__date">{formatDate(date)}</div>
