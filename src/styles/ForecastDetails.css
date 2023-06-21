@@ -1,0 +1,9 @@
+.forecast-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 19px;
+}
+.forecast-details__date {
+    font-weight: 900;
+}
