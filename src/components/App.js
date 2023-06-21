@@ -12,16 +12,19 @@ function App() {
     country: "",
   });
   const [forecasts, setForecasts] = useState([]);
-  const [selectedDate, setSelectedDate] = useState(0);
+  const [selectedDate, setSelectedDate] = useState();
+  const [searchText, setSearchText] = useState("");
+
   const selectedForecast = forecasts.find(
     (forecast) => forecast.date === selectedDate
   );
+
   const handleForecastSelect = (date) => {
     setSelectedDate(date);
   };
 
-  const updateForecast = async () => {
-    const forecastData = await getForecast();
+  const updateForecast = async (city) => {
+    const forecastData = await getForecast(city);
     setLocation(forecastData.location);
     setForecasts(forecastData.forecasts);
     setSelectedDate(forecastData.forecasts[0].date);
@@ -31,11 +34,19 @@ function App() {
     updateForecast();
   }, []);
 
+  const handleCitySearch = () => {
+    updateForecast(searchText);
+  };
+
   return (
     <div className="weather-app">
       <h1>Weather App</h1>
       <LocationDetails city={location.city} country={location.country} />
-      <SearchForm />
+      <SearchForm
+        searchText={searchText}
+        setSearchText={setSearchText}
+        onSubmit={handleCitySearch}
+      />
       <ForecastList
         forecasts={forecasts}
         handleForecastSelect={handleForecastSelect}

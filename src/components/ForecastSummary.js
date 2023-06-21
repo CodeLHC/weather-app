@@ -19,7 +19,9 @@ function ForcastSummary({
       <div className="forecast-summary__temperature">{`${temperature}°C`}</div>
       <div className="forecast-summary__description">{description}</div>
       <button
-        onClick={() => handleForecastSelect(formatDate(date))}
+        onClick={() => {
+          handleForecastSelect(date);
+        }}
         type="button"
       >
         More Details

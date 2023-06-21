@@ -1,8 +1,12 @@
 import axios from "axios";
 
-const getForecast = () => {
+const getForecast = (city) => {
+  let endpoint = "https://cmd-shift-weather-app.onrender.com/forecast";
+  if (city) {
+    endpoint += `?city=${city}`;
+  }
   return axios
-    .get("https://cmd-shift-weather-app.onrender.com/forecast?city=Manchester")
+    .get(endpoint)
     .then((response) => {
       return response.data;
     })
