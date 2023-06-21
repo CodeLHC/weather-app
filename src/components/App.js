@@ -40,7 +40,9 @@ function App() {
 
   return (
     <div className="weather-app">
-      <h1>Weather App</h1>
+      <div className="heading">
+        <h1>WeatherWise</h1>
+      </div>
       <LocationDetails city={location.city} country={location.country} />
       <SearchForm
         searchText={searchText}
