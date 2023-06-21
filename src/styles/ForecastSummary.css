@@ -1,0 +1,38 @@
+.forecast-summary__date {
+font-weight:900;
+font-size: 21px;
+
+}
+
+.forecast-summary {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.forecast-summary__temperature {
+    padding: 1%;
+    font-size: 18px;
+}
+
+.forecast-summary__description {
+    padding: 1%;
+    margin-top: 2px;
+    font-size: 18px;
+}
+
+.forecast-summary__button {
+    background-color: #EDF2F4;
+    border: #EDF2F4;
+    color: #2B2D42;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition-duration: 0.4s;
+    margin-top: 3px;
+}
+
+.forecast-summary__button:hover {
+    background-color: #2B2D42;
+    color: #EDF2F4;
+}

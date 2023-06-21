@@ -1,6 +1,7 @@
 import React from "react";
 import iconData from "../data/iconData.json";
 import formatDate from "../utils/formatDate";
+import "../styles/ForecastSummary.css";
 
 function ForcastSummary({
   date,
@@ -19,6 +20,7 @@ function ForcastSummary({
       <div className="forecast-summary__temperature">{`${temperature}°C`}</div>
       <div className="forecast-summary__description">{description}</div>
       <button
+        className="forecast-summary__button"
         onClick={() => {
           handleForecastSelect(date);
         }}
