@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import axios from "axios";
 
 const getForecast = (city) => {
@@ -10,7 +11,15 @@ const getForecast = (city) => {
     .then((response) => {
       return response.data;
     })
-    .catch((err) => console.log(err));
+    .catch((error) => {
+      const { status } = error.response;
+      if (status === 404) {
+        console.error("Location is not valid", error);
+      }
+      if (status === 500) {
+        console.error("Server error", error);
+      }
+    });
 };
 
 export default getForecast;
