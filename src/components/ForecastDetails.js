@@ -15,21 +15,31 @@ function ForecastDetails({ forecast }) {
       <div className="forecast-details__date">{`The breakdown for ${formatDate(
         forecast.date
       )}`}</div>
-      <FontAwesomeIcon
-        icon={faTemperatureArrowUp}
-        style={{ color: "#2B2D42" }}
-      />
-      <div>{`Max Temperature: ${forecast.temperature.max}`}</div>
-      <FontAwesomeIcon
-        icon={faTemperatureArrowDown}
-        style={{ color: "#2B2D42" }}
-      />
-      <div>{`Min Temperature: ${forecast.temperature.min}`}</div>
-      <FontAwesomeIcon icon={faDroplet} style={{ color: "#2B2D42" }} />
-      <div>{`Humidity: ${forecast.humidity}%`}</div>
-      <FontAwesomeIcon icon={faWind} style={{ color: "#2B2D42" }} />
+      <div className="forcast-details__horizontal-capture">
+        <div className="grouped-vertical-view">
+          <FontAwesomeIcon
+            icon={faTemperatureArrowUp}
+            style={{ color: "#2B2D42" }}
+          />
+          {`Max Temperature: ${forecast.temperature.max}`}
+        </div>
+        <div className="grouped-vertical-view">
+          <FontAwesomeIcon
+            icon={faTemperatureArrowDown}
+            style={{ color: "#2B2D42" }}
+          />
+          {`Min Temperature: ${forecast.temperature.min}`}
+        </div>
+        <div className="grouped-vertical-view">
+          <FontAwesomeIcon icon={faDroplet} style={{ color: "#2B2D42" }} />
+          {`Humidity: ${forecast.humidity}%`}
+        </div>
+        <div className="grouped-vertical-view">
+          <FontAwesomeIcon icon={faWind} style={{ color: "#2B2D42" }} />
 
-      <div>{`Wind: ${forecast.wind.speed}mph`}</div>
+          {`Wind: ${forecast.wind.speed}mph`}
+        </div>
+      </div>
     </div>
   );
 }
