@@ -1,18 +1,26 @@
-.forecast-details{
+.forecast-details {
     display: flex;
     flex-direction: column;
     align-items: center;
     font-size: 19px;
-}
-.forecast-details__date {
+    gap: 1em;
+  }
+  .forecast-detailsdate {
     font-weight: 900;
-}
-
-.forcast-details__horizontal-capture{
+  }
+  
+  .forcast-detailshorizontal-capture {
     display: flex;
-}
-
-.grouped-vertical-view {
+    gap: 1.5em;
+    flex-wrap: wrap;
+  }
+  
+  .grouped-vertical-view {
     display: flex;
-    flex-direction: column;
-}
+    flex-direction: space-evenly;
+    align-content: center;
+    align-items: center;
+    gap: 0.5em;
+  }
+  
+  

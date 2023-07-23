@@ -12,7 +12,7 @@ function SearchForm({ searchText, setSearchText, onSubmit }) {
         type="text"
         onChange={handleInputChange}
         value={searchText}
-        placeholder="Enter UK City for forecast details!"
+        placeholder="Enter UK City for forecast!"
       />
       <button className="search-form__button" type="submit" onClick={onSubmit}>
         <FontAwesomeIcon
