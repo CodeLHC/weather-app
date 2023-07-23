@@ -4,7 +4,12 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import "../styles/SearchForm.css";
 
 function SearchForm({ searchText, setSearchText, onSubmit }) {
-  const handleInputChange = (event) => setSearchText(event.target.value);
+  const handleInputChange = (event) => {
+    const input = event.target.value;
+
+    const isValid = input === "" || /^[a-z -]*$/gi.test(input);
+    if (isValid) setSearchText(input);
+  };
   return (
     <div className="search-form">
       <input
