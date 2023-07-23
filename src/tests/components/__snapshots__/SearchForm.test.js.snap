@@ -7,7 +7,7 @@ exports[`SearchForm renders correctly 1`] = `
   >
     <input
       class="search-form__input"
-      placeholder="Enter UK City for forecast details!"
+      placeholder="Enter UK City for forecast!"
       type="text"
       value="Liverpool"
     />

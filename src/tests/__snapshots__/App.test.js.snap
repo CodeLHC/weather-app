@@ -12,19 +12,17 @@ exports[`App renders correctly 1`] = `
         WeatherWise
       </h1>
     </div>
-    <div>
-      <h1
-        class="locationInfo"
-      >
-         
-      </h1>
-    </div>
+    <h1
+      class="location-info"
+    >
+       
+    </h1>
     <div
       class="search-form"
     >
       <input
         class="search-form__input"
-        placeholder="Enter UK City for forecast details!"
+        placeholder="Enter UK City for forecast!"
         type="text"
         value=""
       />
